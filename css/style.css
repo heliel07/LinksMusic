@@ -15,8 +15,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: #421042;
-    /* overflow: hidden; */
+    background-color: #1f1f1f;
 }
 
 body::before {
@@ -26,109 +25,158 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../img/Capa\ Album\ Volume\ 01.png) no-repeat center/cover;
-    filter: blur(8px) opacity(0.5);
     z-index: -1;
 }
 
 .container {
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    width: 350px;
     gap: 0;
     z-index: 1;
-    margin-top: 450px;
+    margin-top: 150px;
+    margin-bottom: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 80vw;
+    box-shadow: 2px 2px 17px 3px #000;
+    border-radius: 15px;
 }
 
 .sectionImage {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .sectionImage img {
-    width: 350px;
-    height: auto;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .sectionTitle {
-    background-color: #212121;
+    background-color: #363636;
     color: white;
     padding: 10px;
-    text-align: center;
     padding: 15px;
     margin: 0;
     width: 100%;
-    border-radius: 10px;
+    height: auto;
 }
 
-.sectionTitle h1{
-    font-size: 14pt;
+.sectionTitle .sectionOpenTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sectionTitle .sectionOpenTitle button {
+    background-color: #212121;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sectionTitle .sectionOpenTitle button:hover{
+    background-color: #fff;
+}
+
+.sectionTitle .sectionOpenTitle button img {
+    display: none;
+    width: 20px;
+    filter: invert(1);
+}
+
+.sectionTitle .sectionOpenTitle button img:hover{
+    filter: invert(0);
+}
+
+.sectionTitle h1 {
+    font-size: 22pt;
     margin-bottom: 3px;
+    font-weight: 900;
+    color: #fff;
 }
 
-.sectionTitle p{
-    font-size: 10pt;
+#paragraphs {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    max-height: 500px;
 }
 
-.sectionMusic{
+#paragraphs.hidden {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.sectionTitle p {
+    font-size: 12pt;
+    line-height: 20px;
+    margin-top: 18px;
+    color: #e3e3e3;
+}
+
+.sectionMusic {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    margin-top: 5px;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
 }
 
-.subMusic{
+.subMusic:first-child {
+    border-top-right-radius: 15px;
+}
+
+.subMusic {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
     width: 100%;
-    border-bottom: 1px solid #421042;
+    border-bottom: 1px solid #2f2d2d;
     padding: 15px;
+    gap: 10px;
 }
 
-.subMusic img{
-    width: 40%;
+.subMusic h2 {
+    font-size: 14pt;
+    color: #2f2d2d;
 }
 
-#imgApple{
-    width: 38%;
-}
-
-#imgYoutube{
-    width: 35%;
-}
-
-#imgTidal{
-    width: 30%;
-}
-
-.subMusic button{
+.subMusic button {
     padding: 10px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid #421042;
+    border: 1px solid #2f2d2d;
     cursor: pointer;
-    color: #421042;
+    color: #2f2d2d;
     background-color: #fff;
     transition: 0.3s ease-in-out;
 }
 
-.subMusic button:hover{
-    background-color: #421042;
+.subMusic button:hover {
+    background-color: #2f2d2d;
     color: #fff;
 }
 
-header{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,16 +189,68 @@ header{
     text-align: center;
 }
 
-header h3{
+footer h3 {
     font-size: 12pt;
 }
 
-header p{
+footer p {
     font-size: 10.5pt;
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 1070px) {
+    .container {
+        width: 90vw;
+        margin-top: 90px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .container {
+        width: 97vw;
+        margin-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 815px) {
+    .container {
+        flex-direction: column;
+        width: 50vw;
+        margin-top: 500px;
+    }
+
+    .sectionImage {
+        border-radius: 15px;
+    }
+
+    .sectionTitle .sectionOpenTitle button {
+        display: flex;
+    }
+
+    .sectionTitle .sectionOpenTitle button img {
+        display: flex;
+    }
+
+    .sectionImage img {
+        border-radius: 15px;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 815px) {
     .container{
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .container{
+        margin-top: 450px;
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .container {
         width: 100vw;
         margin-top: 400px;
     }
@@ -161,20 +261,20 @@ header p{
         width: 100vw;
         border-radius: 10px;
     }
-    
-    .subMusic button{
+
+    .subMusic button {
         padding: 6px;
     }
 
-    header{
+    footer {
         margin-top: 20px;
     }
 
-    header h3{
+    footer h3 {
         font-size: 11pt;
     }
-    
-    header p{
+
+    footer p {
         font-size: 10pt;
     }
 }

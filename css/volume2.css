@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #fefaee;
+    /* overflow: hidden; */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/imgVol2.jpg) no-repeat center/cover;
+    filter: blur(8px) opacity(0.5);
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    gap: 0;
+    z-index: 1;
+    margin-top: 80px;
+}
+
+.sectionImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sectionImage img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sectionTitle {
+    background-color: #212121;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sectionTitle h1{
+    font-size: 14pt;
+    margin-bottom: 3px;
+}
+
+.sectionTitle p{
+    font-size: 10pt;
+}
+
+.sectionBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.sectionBack button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid #212121;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background-color: #fefaee;
+    color: #212121;
+    font-weight: 500;
+}
+
+.sectionBack button:hover{
+    background-color: #212121;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.sectionBack button img{
+    width: 30px;
+}
+
+.sectionBack button:hover img{
+    filter: invert(1);
+}
+
+.sectionMusic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.subMusic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #212121;
+    padding: 15px;
+}
+
+.subMusic img{
+    width: 40%;
+}
+
+#imgApple{
+    width: 38%;
+}
+
+#imgYoutube{
+    width: 35%;
+}
+
+#imgTidal{
+    width: 30%;
+}
+
+.subMusic button{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #212121;
+    cursor: pointer;
+    color: #212121;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.subMusic button:hover{
+    background-color: #212121;
+    color: #fff;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    color: #212121;
+    gap: 7px;
+    padding: 15px;
+    text-align: center;
+}
+
+footer h3{
+    font-size: 12pt;
+}
+
+footer p{
+    font-size: 10.5pt;
+}
+
+@media only screen and (max-width: 370px) {
+    .container{
+        width: 100vw;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .sectionImage img {
+        width: 100vw;
+        border-radius: 10px;
+    }
+    
+    .subMusic button{
+        padding: 6px;
+    }
+
+    footer{
+        margin-top: 20px;
+    }
+
+    footer h3{
+        font-size: 11pt;
+    }
+    
+    footer p{
+        font-size: 10pt;
+    }
+}
