@@ -9,4 +9,5 @@ Ferramentas utilizadas:
 - Figma (para esboço de design);
 - Canva (para artes de imagens);
 - Imagens da internet png;
+
 Espero que goste, é simples, com pouco JavaScript, sendo mais um site "estático" para representação, como as landing page, mas, com uma proposta diferente e resolvendo uma dor.
